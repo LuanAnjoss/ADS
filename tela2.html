@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tela de Cadastro</title>
+        <link rel="stylesheet" href="estilo2.css">
+    </head>
+    <body>
+        <h2>Cadastro: </h2>
+        <form id="LoginForm">
+            <label for="fname">Nome:</label><br>
+            <input type="text" id="fname" name="fname" value=""><br>
+            
+            <label for="lname">Email:</label><br>
+            <input type="text" id="lname" name="lname" value=""><br>
+            
+            <label for="cpf">CPF</label><br>
+            <input type="text" id="cpf" name="cpf" value=""><br>
+            
+            <label for="dob">Data de Nascimento</label><br>
+            <input type="date" id="dob" name="dob" value=""><br><br>
+            
+            <input type="button" value="Cadastrar" onclick="Validareredirecionar()">
+          </form>
+        <script>
+            function Validareredirecionar() {
+                var Nome = document.getElementById("fname").value;
+                var Email = document.getElementById("lname").value;
+                var CPF = document.getElementById("cpf").value;
+                var DataNascimento = document.getElementById("dob").value;
+
+                if(Nome === "" || Email === "" || CPF === "" || DataNascimento ===""){
+                    alert("Preencha todos os campos.");
+                } else{
+                    alert("Cadastro Feito com sucesso.")
+                }
+                }
+        </script>
+    </body>
+</html>
